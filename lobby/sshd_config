@@ -1,0 +1,6 @@
+Port 5522
+PermitRootLogin no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+StrictModes no
+AuthorizedKeysFile .ssh/authorized_keys
