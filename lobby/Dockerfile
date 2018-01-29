@@ -6,7 +6,7 @@ RUN apk --update add openssh \
 
 # Only use host keys with good crypto algorithms.
 RUN cd /etc/ssh \
-    && rm ssh_host_*key* \
+    && rm -f ssh_host_*key* \
     && ssh-keygen -t ed25519 -f ssh_host_ed25519_key -N "" < /dev/null \
     && ssh-keygen -t rsa -b 4096 -f ssh_host_rsa_key -N "" < /dev/null
 
