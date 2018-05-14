@@ -13,3 +13,6 @@ RUN apt-get update -y \
        texlive-science \
        texlive-xetex \
     && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /data
+VOLUME ["/data"]
