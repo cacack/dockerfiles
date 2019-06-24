@@ -1,7 +1,8 @@
-FROM alpine:3.7
+FROM alpine:3.10
 
 # Install openssh
-RUN apk --update add openssh \
+RUN apk --update upgrade \
+    && apk add openssh \
     && rm -f /var/cache/apk/*
 
 # Only use host keys with good crypto algorithms.
